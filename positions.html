@@ -1,0 +1,81 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Positions</title>
+    <style>
+      body {
+        margin-bottom: 1000px;
+      }
+      div {
+        font-size: 20px;
+        background-color: #ffb7e7;
+        border: 3px solid #ee23aa;
+      }
+      div.static {
+        position: static;
+      }
+      div.relative {
+        position: relative;
+        width: 800px;
+        height: 600px;
+        left: 100px;
+        background-color: auto;
+        border: none;
+      }
+      div.absolute {
+        position: absolute;
+        bottom: 80px;
+        right: 0;
+        width: 300px;
+        height: 200px;
+      }
+      div.fixed {
+        position: fixed;
+        /* top:...; */
+        right: 0;
+        bottom: 0;
+        left: 100px;
+      }
+      div.sticky {
+        position: -webkit-sticky; /* Safari */
+        position: sticky;
+        background-color: #c83195;
+
+        top: 0;
+      }
+    </style>
+  </head>
+  <body>
+    <h1>This is how element positions are set in CSS</h1>
+    <div class="sticky">
+      <strong>5-</strong> I'm a <strong>Sticky</strong> element.I'm positioned
+      based on the user's scroll position.I toggle between <u>relative</u> and
+      <u>fixed</u> until a given offset position is met in let in the veiwport
+      then I <q>stick</q> in place(like posistion fixed). the page is
+      <u>scrolled</u>.
+    </div>
+    <br />
+    <div class="relative">
+      <strong>3-</strong> I'm a <strong>Relative</strong> element.My position is
+      relative to the top, right,bottom and left properties you set.
+      <div class="absolute">
+        <strong>4-</strong> I'm an <strong>Absolute</strong> element.I'am
+        positioned relative to the nearest positioned ancestor (instead of
+        positioned relative to the viewport, like fixed).
+      </div>
+    </div>
+    <hr />
+    <div class="static">
+      <strong>1-</strong>I'm a <strong>Static</strong> element.Actually all
+      elements are static by default
+    </div>
+
+    <div class="fixed">
+      <strong>2-</strong> I'm a <strong>Fixed</strong> element.I'm positioned
+      relative to the viewport, which means I always stays in the same place
+      even if the page is <u>scrolled</u>.
+    </div>
+  </body>
+</html>
